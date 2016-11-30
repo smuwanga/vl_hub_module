@@ -24,7 +24,7 @@ return [
     |
     */
 
-    'name' => 'Laravel 5 Bootstrap',
+    'name' => 'Facility Module-Viral Load Dashboard',
 
     /*
     |--------------------------------------------------------------------------
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'EAT',
 
     /*
     |--------------------------------------------------------------------------
@@ -196,11 +196,17 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
 
         /*
          * Has to override the Collective\Html\HtmlServiceProvider form singleton
          */
         App\Providers\MacroServiceProvider::class,
+
+        /*
+        * CPHL's custom helper/utilities class
+        */
+        App\Providers\UtilitiesServiceProvider::class,
     ],
 
     /*
@@ -257,5 +263,13 @@ return [
         'Gravatar'    => Creativeorange\Gravatar\Facades\Gravatar::class,
         'Html'        => Collective\Html\HtmlFacade::class,
         'Socialite'   => Laravel\Socialite\Facades\Socialite::class,
+        'Datatables'  => Yajra\Datatables\Facades\Datatables::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+        
+
+        /*
+        * CPHL Custom classes
+        */
+        'Utilities' => App\Utils\Utilities::class,
     ],
 ];

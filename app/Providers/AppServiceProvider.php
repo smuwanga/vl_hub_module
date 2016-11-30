@@ -64,6 +64,12 @@ class AppServiceProvider extends ServiceProvider
             $loader->alias('Debugbar', \Barryvdh\Debugbar\Facade::class);
 
             $this->app->register(\Laracasts\Generators\GeneratorsServiceProvider::class);
+
+            /**
+            * Model generator for existing tables
+            */
+            $this->app->register('Iber\Generator\ModelGeneratorProvider');
+
         }
     }
 }

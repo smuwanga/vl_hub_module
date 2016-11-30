@@ -11,6 +11,7 @@
                 </div>
 
                 <div class="panel-body">
+                    
                     {{ trans('strings.frontend.welcome_to', ['place' => app_name()]) }}
                 </div>
             </div><!-- panel -->
